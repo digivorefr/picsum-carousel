@@ -7,16 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
   <meta name="robots" content="index, follow" />
 
-  <title>🚀 Veronique 🇫🇷 an "almost in space" VueJS Typescript Development Boilerplate</title>
+  <title>picsum.photos gallery 📷</title>
   <meta name="description"
-    content="Dockerized development environment : VueJs, Typescript, Sass, Webpack, Hot Module Reloading" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="VueJS Typescript Development Boilerplate | Veronique" />
-  <!-- <meta property="og:url" content="" /> -->
-  <meta property="og:site_name"
-    content="🚀 Veronique 🇫🇷 an 'almost in space' VueJS Typescript Development Boilerplate" />
-  <meta property="og:description" content="" />
+    content="Select 10 random images from picsum.photos and display them into a beautiful carousel" />
 
   <meta name="theme-color" content="#FFFFFF" />
   <link rel="icon" sizes="16x16" href="/assets/favicon-16x16.png" />
@@ -32,6 +25,12 @@
 </head>
 
 <body>
+  <input type="checkbox" id="theme" name="theme"
+    style="opacity:0; position:absolute; visibility: hidden; z-index:-1; pointer-events: none;" />
+  <label for="theme" id="theme-switcher">
+    <div class="icon icon--sun"></div>
+    <div class="icon icon--moon"></div>
+  </label>
   <div id="app"></div>
 </body>
 

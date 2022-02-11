@@ -1,0 +1,30 @@
+// Theme switcher.
+#theme {
+  &-switcher {
+    position: absolute;
+    z-index: 20;
+    top: 24px;
+    left: 50%;
+    display: flex;
+    gap: 0.25rem;
+    transform: translateX(-50%) translateY(-50%);
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: calc(100% + 0.175rem);
+      width: 50%;
+      height: 1px;
+      left: 0%;
+      background: var(--txt);
+
+      transition: all 125ms var(--ease);
+
+      body.dark-mode & {
+        left: 50%;
+      }
+    }
+  }
+}

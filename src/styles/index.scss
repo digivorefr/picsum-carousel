@@ -1,7 +1,60 @@
-/* For demo purposes only */
+@import 'flickity';
+
 body {
-  font-family: sans-serif;
+  // A few variables...
+  --bg: #fefefe;
+  --txt: #141414;
+  --txt-rgb: 20, 20, 20;
+  --ease: cubic-bezier(0.2, 0, 0.355, 1);
+
+  // Basic setup.
+  color: var(--txt);
   margin: 0;
-  padding: 0;
+  display: flex;
+  font-size: 16px;
   min-height: 100vh;
+  line-height: 1.1;
+  align-items: stretch;
+  font-family: 'Mulish', sans-serif;
+  justify-content: stretch;
+  background: var(--bg);
+
+  // Dark mode settings.
+  &.dark-mode {
+    --bg: #141414;
+    --txt: #fefefe;
+    --txt-rgb: 254, 254, 254;
+  }
 }
+
+// Reset.
+p {
+  margin: 0;
+}
+
+a,
+a:visited {
+  color: var(--txt);
+}
+
+// Basic icon.
+.icon {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: var(--txt);
+
+  &[class*='--sun'] {
+    mask: url(images/icons/sun.svg) no-repeat center / contain;
+  }
+  &[class*='--moon'] {
+    mask: url(images/icons/moon.svg) no-repeat center / contain;
+  }
+}
+
+// Imports.
+@import 'elements/theme';
+@import 'elements/app';
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400&display=swap');
