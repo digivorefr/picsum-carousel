@@ -1,4 +1,4 @@
-# Picture carousel
+# picsum.photos carousel
 Uses picsum.photos API to randomly select 10 pictures and display them into a carousel.
 
 ## Install
